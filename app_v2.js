@@ -6,7 +6,7 @@ const ERAS = [
   { id: "statistical", label: "Statistical learning", short: "Statistical ML", range: "1993–2011", start: 1993, end: 2011 },
   { id: "deep", label: "Deep learning takeoff", short: "Deep learning", range: "2012–2017", start: 2012, end: 2017 },
   { id: "foundation", label: "Foundation models", short: "Foundation models", range: "2018–2021", start: 2018, end: 2021 },
-  { id: "boom", label: "Generative AI boom", short: "Generative boom", range: "2022–2025", start: 2022, end: 2025 }
+  { id: "boom", label: "Generative AI boom", short: "Generative boom", range: "2022–2026", start: 2022, end: 2026 }
 ];
 
 const THEME_COLORS = {
@@ -17,6 +17,7 @@ const THEME_COLORS = {
   "Vision": "#f2c94c",
   "Robotics & games": "#6ca9ff",
   "Generative AI": "#ff8fbd",
+  "Science & discovery": "#47b36b",
   "Infrastructure & scale": "#a3a89c",
   "Governance & society": "#b67d53"
 };
@@ -486,7 +487,7 @@ const EVENTS = [
     source: "NeurIPS · Denoising Diffusion Probabilistic Models", sourceUrl: "https://papers.nips.cc/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html"
   },
   {
-    id: "alphafold2", year: 2020, displayYear: "2020", era: "foundation", theme: "Governance & society",
+    id: "alphafold2", year: 2020, displayYear: "2020", era: "foundation", theme: "Science & discovery",
     title: "AlphaFold2 transforms protein-structure prediction",
     summary: "DeepMind’s system predicts many protein structures from amino-acid sequences with near-experimental accuracy.",
     significance: "It demonstrates that modern AI can accelerate fundamental science, not just perception, games, or content generation.",
@@ -605,13 +606,121 @@ const EVENTS = [
     source: "Anthropic · Introducing the Model Context Protocol", sourceUrl: "https://www.anthropic.com/news/model-context-protocol"
   },
   {
-    id: "deepseek-r1", year: 2025, displayYear: "2025", era: "boom", theme: "Logic & computation",
+    id: "deepseek-r1", year: 2025, month: 1, day: 20, displayYear: "Jan 2025", era: "boom", theme: "Logic & computation",
     title: "DeepSeek-R1 broadens access to reasoning models",
     summary: "DeepSeek releases model weights and a technical report for reasoning models trained with large-scale reinforcement learning.",
     significance: "R1 demonstrates competitive reasoning with disclosed methods and open weights, intensifying research into efficiency, distillation, and accessible reasoning systems.",
     source: "Nature · DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning", sourceUrl: "https://doi.org/10.1038/s41586-025-09422-z"
+  },
+  {
+    id: "female-fly-connectome", year: 2024, month: 10, day: 2, displayYear: "Oct 2024", era: "boom", theme: "Science & discovery",
+    title: "AI helps map an entire adult female fly brain",
+    summary: "The FlyWire consortium reconstructs 139,255 neurons and more than 50 million synapses in the first complete wiring diagram of an adult fruit fly brain.",
+    significance: "Machine vision and large-scale human proofreading make a whole complex adult brain navigable neuron by neuron, opening brain-wide studies of perception, memory, and behavior.",
+    source: "Nature · Neuronal wiring diagram of an adult brain", sourceUrl: "https://doi.org/10.1038/s41586-024-07558-y"
+  },
+  {
+    id: "gemini-robotics", year: 2025, month: 3, day: 12, displayYear: "Mar 2025", era: "boom", theme: "Robotics & games",
+    title: "Gemini Robotics adds physical action to a foundation model",
+    summary: "Google DeepMind introduces vision-language-action models that interpret instructions and directly control several kinds of robots.",
+    significance: "The work extends general-purpose multimodal models from describing the world toward reasoning about space, adapting to new settings, and acting through physical machines.",
+    source: "Google DeepMind · Gemini Robotics", sourceUrl: "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/"
+  },
+  {
+    id: "alphaevolve", year: 2025, month: 5, day: 14, displayYear: "May 2025", era: "boom", theme: "Science & discovery",
+    title: "AlphaEvolve discovers and improves algorithms",
+    summary: "A Gemini-powered coding agent combines generated programs, automated evaluation, and evolutionary search to optimize computing systems and mathematical constructions.",
+    significance: "It produces deployable improvements inside Google and new best-known constructions for open mathematics problems, showing how language models can drive verifiable discovery loops.",
+    source: "Google DeepMind · AlphaEvolve", sourceUrl: "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+  },
+  {
+    id: "aurora-earth-system", year: 2025, month: 5, day: 21, displayYear: "May 2025", era: "boom", theme: "Science & discovery",
+    title: "Aurora forecasts the Earth system",
+    summary: "A foundation model trained on more than one million hours of geophysical data outperforms operational systems across weather, air quality, waves, and cyclone tracks.",
+    significance: "Aurora shows that one adaptable model can deliver state-of-the-art environmental forecasts at orders-of-magnitude lower computational cost.",
+    source: "Nature · A foundation model for the Earth system", sourceUrl: "https://doi.org/10.1038/s41586-025-09005-y"
+  },
+  {
+    id: "alphagenome", year: 2025, month: 6, day: 25, displayYear: "Jun 2025", era: "boom", theme: "Science & discovery",
+    title: "AlphaGenome models long-range DNA regulation",
+    summary: "Google DeepMind introduces a unified model that reads one million DNA letters and predicts thousands of molecular effects down to single-base resolution.",
+    significance: "The model advances prediction of how genetic variants alter gene regulation, while remaining a research tool rather than a clinically validated diagnostic system.",
+    source: "Google DeepMind · AlphaGenome", sourceUrl: "https://deepmind.google/blog/alphagenome-ai-for-better-understanding-the-genome/"
+  },
+  {
+    id: "imo-gold", year: 2025, month: 7, day: 21, displayYear: "Jul 2025", era: "boom", theme: "Logic & computation",
+    title: "A general-purpose model reaches IMO gold level",
+    summary: "An advanced Gemini Deep Think system solves five of six International Mathematical Olympiad problems in natural language and scores 35 out of 42.",
+    significance: "Official grading by IMO coordinators marks the first certified gold-medal-level performance by an AI system, one year after specialist systems reached silver.",
+    source: "Google DeepMind · Gold-medal standard at IMO 2025", sourceUrl: "https://deepmind.google/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/"
+  },
+  {
+    id: "virtual-lab-nanobodies", year: 2025, month: 7, day: 29, displayYear: "Jul 2025", era: "boom", theme: "Science & discovery",
+    title: "A virtual lab designs experimentally validated nanobodies",
+    summary: "A human-supervised team of language-model agents designs 92 candidates against SARS-CoV-2 using protein-modeling tools, with multiple binders confirmed in wet-lab tests.",
+    significance: "The study connects multi-agent scientific reasoning to physical experiments, including two designs with improved binding to recent viral variants.",
+    source: "Nature · The Virtual Lab", sourceUrl: "https://doi.org/10.1038/s41586-025-09442-9"
+  },
+  {
+    id: "opencrispr-1", year: 2025, month: 7, day: 30, displayYear: "Jul 2025", era: "boom", theme: "Science & discovery",
+    title: "AI generates a functional CRISPR genome editor",
+    summary: "Protein language models generate novel CRISPR–Cas systems, including OpenCRISPR-1, which performs programmable editing in human cells.",
+    significance: "Experimental results show generative models can create useful biological machinery beyond known natural proteins, while reported activity and specificity remain task-dependent.",
+    source: "Nature · Generative design of CRISPR–Cas systems", sourceUrl: "https://doi.org/10.1038/s41586-025-09298-z"
+  },
+  {
+    id: "gpt-5", year: 2025, month: 8, day: 7, displayYear: "Aug 2025", era: "boom", theme: "Generative AI",
+    title: "GPT-5 unifies fast answers and extended reasoning",
+    summary: "OpenAI releases a routed system that selects between rapid responses and longer reasoning, making reasoning capability available across ChatGPT’s free and paid tiers.",
+    significance: "The launch makes adaptive inference-time computation a default consumer interface rather than a separate specialist-model choice.",
+    source: "OpenAI · Introducing GPT-5", sourceUrl: "https://openai.com/index/introducing-gpt-5/"
+  },
+  {
+    id: "robin-scientific-discovery", year: 2026, month: 5, day: 19, displayYear: "May 2026", era: "boom", theme: "Science & discovery",
+    title: "Robin closes the loop between AI hypotheses and lab tests",
+    summary: "A multi-agent system proposes treatments and a possible biological target for dry age-related macular degeneration, then routes candidates through experimental validation.",
+    significance: "The peer-reviewed work demonstrates an integrated AI discovery process in which literature reasoning, data analysis, and laboratory evidence iteratively constrain one another.",
+    source: "Nature · Towards an AI co-scientist", sourceUrl: "https://doi.org/10.1038/s41586-026-10652-y"
+  },
+  {
+    id: "erdos-unit-distance", year: 2026, month: 5, day: 20, displayYear: "May 2026", era: "boom", theme: "Science & discovery",
+    title: "An AI model disproves Erdős’s unit-distance conjecture",
+    summary: "An internal OpenAI reasoning model finds a counterexample to a conjecture that had guided work on the planar unit-distance problem for nearly 80 years.",
+    significance: "External mathematicians verify and clarify the argument, making it a rare example of a general-purpose model producing an original result on a long-standing research problem.",
+    source: "arXiv · Remarks on the disproof of the unit distance conjecture", sourceUrl: "https://arxiv.org/abs/2605.20695"
+  },
+  {
+    id: "nise-protein-design", year: 2026, month: 6, day: 24, displayYear: "Jun 2026", era: "boom", theme: "Science & discovery",
+    title: "AI designs drug-binding proteins from scratch",
+    summary: "The NISE method generates proteins that bind the medicines exatecan and apixaban without starting from known protein scaffolds or target-specific examples.",
+    significance: "Laboratory measurements confirm nanomolar-to-picomolar binding, demonstrating zero-shot generative design for small-molecule recognition.",
+    source: "Nature · Zero-shot design of drug-binding proteins", sourceUrl: "https://doi.org/10.1038/s41586-026-10670-w"
+  },
+  {
+    id: "male-fly-connectome", year: 2026, month: 9, day: 3, displayYear: "Sep 2026", era: "boom", theme: "Science & discovery",
+    title: "AI helps complete the male fruit fly nervous system",
+    summary: "Researchers map 166,691 neurons and roughly 125 million synapses across a male fly’s brain and ventral nerve cord.",
+    significance: "The largest brain map by neuron count enables the first synaptic-resolution comparison of male and female brains and traces complete sensory-to-motor circuits.",
+    source: "Google Research · Mapping the complete male fruit fly brain", sourceUrl: "https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/"
+  },
+  {
+    id: "navier-stokes-ai-claim", year: 2026, month: 9, day: 8, displayYear: "Sep 2026", era: "boom", theme: "Science & discovery",
+    title: "AI-generated Navier–Stokes proof enters review",
+    summary: "OpenAI publishes a 166-page argument and Lean formalization claiming a forced three-dimensional fluid can develop a finite-time singularity.",
+    significance: "The release may resolve a Millennium Prize formulation, but it remains a claim under expert review: the Clay Mathematics Institute still lists the problem as unsolved pending publication and broad acceptance.",
+    source: "Nature · OpenAI claims a Navier–Stokes breakthrough", sourceUrl: "https://www.nature.com/articles/d41586-026-02842-5"
+  },
+  {
+    id: "gpt-6-astra", year: 2026, month: 9, day: 3, displayYear: "Sep 2026", era: "boom", theme: "Generative AI",
+    title: "GPT-6 Astra pushes frontier models toward research agents",
+    summary: "OpenAI begins rolling out a new model generation emphasizing computer use, browsing, software engineering, cybersecurity, and scientific work.",
+    significance: "Its release reflects the shift from chat-oriented models toward long-horizon systems that coordinate tools and complete professional tasks; headline benchmark results remain vendor-reported.",
+    source: "OpenAI · GPT-6 Astra", sourceUrl: "https://openai.com/index/gpt-6-astra/"
   }
-].sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
+].sort((a, b) => a.year - b.year
+  || (a.month ?? 0) - (b.month ?? 0)
+  || (a.day ?? 0) - (b.day ?? 0)
+  || a.title.localeCompare(b.title));
 
 const state = { search: "", era: "all", theme: "all", view: "timeline", dialogIndex: -1 };
 
