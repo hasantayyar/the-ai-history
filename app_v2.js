@@ -28,7 +28,7 @@ const EVENTS = [
     id: "aristotle-syllogisms", year: -350, displayYear: "c. 350 BCE", era: "foundations", theme: "Logic & computation",
     title: "Aristotle formalizes syllogistic logic",
     summary: "Aristotle describes valid patterns of deduction in which conclusions follow from stated premises.",
-    significance: "It establishes the durable idea that reasoning can be represented by explicit rules—a premise underneath symbolic AI and automated theorem proving.",
+    significance: "It establishes the durable idea that reasoning can be represented by explicit rules-a premise underneath symbolic AI and automated theorem proving.",
     source: "Stanford Encyclopedia of Philosophy · Aristotle’s Logic", sourceUrl: "https://plato.stanford.edu/entries/aristotle-logic/"
   },
   {
@@ -84,7 +84,7 @@ const EVENTS = [
     id: "turing-computation", year: 1936, displayYear: "1936", era: "formal", theme: "Logic & computation",
     title: "Alan Turing defines general computation",
     summary: "Turing describes an abstract machine that manipulates symbols according to rules and formalizes what it means to compute.",
-    significance: "The universal Turing machine provides the conceptual basis for programmable computers—and for software capable of implementing AI methods.",
+    significance: "The universal Turing machine provides the conceptual basis for programmable computers-and for software capable of implementing AI methods.",
     source: "Proceedings of the London Mathematical Society · On Computable Numbers", sourceUrl: "https://doi.org/10.1112/plms/s2-42.1.230"
   },
   {
@@ -217,7 +217,7 @@ const EVENTS = [
     id: "perceptrons-book", year: 1969, displayYear: "1969", era: "birth", theme: "Neural networks",
     title: "Perceptrons exposes limits of shallow networks",
     summary: "Minsky and Papert rigorously analyze what single-layer perceptrons can and cannot represent.",
-    significance: "The critique is mathematically valuable, but—alongside funding and hardware limits—helps cool enthusiasm for neural-network research.",
+    significance: "The critique is mathematically valuable, but-alongside funding and hardware limits-helps cool enthusiasm for neural-network research.",
     source: "MIT Press · Perceptrons", sourceUrl: "https://mitpress.mit.edu/9780262631112/perceptrons/"
   },
   {
@@ -329,7 +329,7 @@ const EVENTS = [
     id: "lenet-5", year: 1998, displayYear: "1998", era: "statistical", theme: "Vision",
     title: "LeNet-5 industrializes convolutional vision",
     summary: "A complete convolutional architecture recognizes handwritten and machine-printed characters in document-processing systems.",
-    significance: "LeNet-5 establishes durable CNN building blocks—convolution, subsampling, and end-to-end gradient training—years before the deep-learning boom.",
+    significance: "LeNet-5 establishes durable CNN building blocks-convolution, subsampling, and end-to-end gradient training-years before the deep-learning boom.",
     source: "Proceedings of the IEEE · Gradient-Based Learning Applied to Document Recognition", sourceUrl: "https://doi.org/10.1109/5.726791"
   },
   {
@@ -364,7 +364,7 @@ const EVENTS = [
     id: "imagenet", year: 2009, displayYear: "2009", era: "statistical", theme: "Vision",
     title: "ImageNet supplies data at unprecedented scale",
     summary: "A curated dataset organizes millions of labeled images across thousands of object categories.",
-    significance: "ImageNet creates a shared benchmark where data, compute, and algorithms can compound—and makes the 2012 deep-learning breakthrough measurable.",
+    significance: "ImageNet creates a shared benchmark where data, compute, and algorithms can compound-and makes the 2012 deep-learning breakthrough measurable.",
     source: "CVPR · ImageNet: A Large-Scale Hierarchical Image Database", sourceUrl: "https://doi.org/10.1109/CVPR.2009.5206848"
   },
   {
@@ -455,7 +455,7 @@ const EVENTS = [
     id: "gpt-2", year: 2019, displayYear: "2019", era: "foundation", theme: "Generative AI",
     title: "GPT-2 demonstrates coherent open-ended generation",
     summary: "A 1.5-billion-parameter transformer generates extended text and performs tasks from prompts without task-specific training.",
-    significance: "Its surprising fluency makes general-purpose text generation—and the governance of model release—a public issue.",
+    significance: "Its surprising fluency makes general-purpose text generation-and the governance of model release-a public issue.",
     source: "OpenAI · Better Language Models and Their Implications", sourceUrl: "https://openai.com/index/better-language-models/"
   },
   {
@@ -771,7 +771,7 @@ function populateFilters() {
 
 function renderStats() {
   document.querySelector("#stat-events").textContent = EVENTS.length;
-  document.querySelector("#stat-years").textContent = `${Math.abs(EVENTS[0].year) + EVENTS.at(-1).year}+`;
+  document.querySelector("#stat-years").textContent = `${(Math.abs(EVENTS[0].year) + EVENTS.at(-1).year).toLocaleString()}+`;
   document.querySelector("#stat-themes").textContent = Object.keys(THEME_COLORS).length;
 }
 
@@ -944,7 +944,7 @@ function render() {
   renderData(events);
   els.resultCount.textContent = `${events.length} milestone${events.length === 1 ? "" : "s"}`;
   if (events.length) {
-    els.activeRange.textContent = `${formatYear(events[0].year)}—${formatYear(events.at(-1).year)}`;
+    els.activeRange.textContent = `${formatYear(events[0].year)}-${formatYear(events.at(-1).year)}`;
   } else {
     els.activeRange.textContent = "No matching range";
   }
